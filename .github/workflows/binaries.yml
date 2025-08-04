@@ -25,12 +25,22 @@ env:
   # List of extra nginx modules to download.
   # NOTE: nginx/njs is not defined here, but directly in the jobs.
   NGINX_MODULES: >-
+    efreak/nginx-dav-ext-module
+    ludios/ngx-fancyindex
+    wxx9248/ngx_brotli
+    ukarim/ngx_markdown_filter_module
+    tokers/zstd-nginx-module
     openresty/echo-nginx-module
     openresty/headers-more-nginx-module
     openresty/set-misc-nginx-module
   # The same as above, but for Windows.
   # - kjdev/nginx-auth-jwt, kjdev/nginx-keyval: a bit complicated to build (TODO)
   NGINX_MODULES_WIN32: >-
+    efreak/nginx-dav-ext-module
+    ludios/ngx-fancyindex
+    wxx9248/ngx_brotli
+    ukarim/ngx_markdown_filter_module
+    tokers/zstd-nginx-module
     openresty/echo-nginx-module
     openresty/headers-more-nginx-module
     openresty/set-misc-nginx-module
@@ -79,6 +89,8 @@ jobs:
             pcre-dev
             zlib-dev
             zlib-static
+            cmark
+            cmark-dev
 
       - name: Build nginx
         env:
