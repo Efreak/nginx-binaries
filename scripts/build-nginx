@@ -23,8 +23,6 @@ add_module() {
 
 	for name in "$@"; do
 		dir=$(find_srcdir "${name#*/}") || return 1
-
-		esac
 		printf -- '--add-module=%s\n' "$dir"
 	done
 }
