@@ -39,7 +39,7 @@ env:
   NGINX_MODULES_WIN32: >-
     efreak/nginx-dav-ext-module
     ludios/ngx-fancyindex
-    wxx9248/ngx_brotli
+    efreak/ngx_brotli
     ukarim/ngx_markdown_filter_module
     tokers/zstd-nginx-module
     openresty/echo-nginx-module
