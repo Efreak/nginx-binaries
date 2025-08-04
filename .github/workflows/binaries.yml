@@ -90,6 +90,10 @@ jobs:
             zlib-static
             cmark
             cmark-dev
+            zstd
+            zstd-dev
+            zstd-static
+            zstd-libs
 
       - name: Build nginx
         env:
