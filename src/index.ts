@@ -8,8 +8,3 @@ export { setLogger } from './logger'
  * Creates a Fetcher that provides **nginx** binary.
  */
 export const NginxBinary = createDownloader('nginx')
-
-/**
- * Creates a Fetcher that provides **njs** binary.
- */
-export const NjsBinary = createDownloader('njs')
