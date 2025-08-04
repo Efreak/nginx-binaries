@@ -30,7 +30,7 @@ add_module() {
 				cd deps/brotli/out
 				cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS="-flto -funroll-loops -ffunction-sections -fdata-sections -Wl,--gc-sections" -DCMAKE_CXX_FLAGS="-flto -funroll-loops -ffunction-sections -fdata-sections -Wl,--gc-sections" -DCMAKE_INSTALL_PREFIX=./installed ..
 				cmake --build . --config Release --target brotlienc
-				popd
+				popd;;
 		esac
 		printf -- '--add-module=%s\n' "$dir"
 	done
