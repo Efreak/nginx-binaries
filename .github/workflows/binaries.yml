@@ -96,6 +96,9 @@ jobs:
             zstd-dev
             zstd-static
             zstd-libs
+            libxslt
+            libxslt-dev
+            libxslt-static
 
       - name: Build nginx
         env:
