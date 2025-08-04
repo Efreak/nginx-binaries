@@ -13,6 +13,7 @@ on:
   pull_request:
   schedule:
     - cron:  '0 0 * * 0'  # run each Sunday
+  workflow_dispatch:
 
 env:
   ALPINE_BRANCH: v3.21
