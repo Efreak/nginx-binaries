@@ -68,7 +68,7 @@ configure() {
 		--without-mail_pop3_module \
 		--without-mail_imap_module \
 		--without-mail_smtp_module \
-		--with-cc-opt="-O3 -flto"
+		--with-cc-opt="-O3 -flto" \
 		"$@"
 
 	# Don't load openssl.cnf unless the OPENSSL_CONF env. variable is
