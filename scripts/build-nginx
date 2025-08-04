@@ -23,15 +23,6 @@ add_module() {
 
 	for name in "$@"; do
 		dir=$(find_srcdir "${name#*/}") || return 1
-		case "$name" in
-			efreak/brotli) pushd "$dir"
-				git submodule update --init --recursive -j8
-				mkdir deps/brotli/out
-				cd deps/brotli/out
-				cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS="-flto -funroll-loops -ffunction-sections -fdata-sections -Wl,--gc-sections" -DCMAKE_CXX_FLAGS="-flto -funroll-loops -ffunction-sections -fdata-sections -Wl,--gc-sections" -DCMAKE_INSTALL_PREFIX=./installed ..
-				cmake --build . --config Release --target brotlienc
-				popd;;
-		esac
 		printf -- '--add-module=%s\n' "$dir"
 	done
 }
